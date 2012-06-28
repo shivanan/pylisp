@@ -1,0 +1,12 @@
+;;Example on importing python modules as packages
+(require 'os)
+(require 'os::path)
+(defun print-program-name ()
+  (print (car sys::argv))
+  )
+(defun print-arguments ()
+  (print (cdr sys::argv))
+  )
+(print-program-name)
+(print-arguments)
+(print os::path)
